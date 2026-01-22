@@ -14,7 +14,7 @@ export default function History() {
     }
 
     axios
-      .get("http://localhost:5000/api/analysis/history", {
+      .get("https://ai-resume-analyzer-backend-aqz0.onrender.com/api/analysis/history", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

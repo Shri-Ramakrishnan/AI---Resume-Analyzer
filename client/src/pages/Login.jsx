@@ -9,7 +9,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    const res = await axios.post("http://localhost:5000/api/auth/login", {
+    const res = await axios.post("https://ai-resume-analyzer-backend-aqz0.onrender.com/api/auth/login", {
       email,
       password,
     });

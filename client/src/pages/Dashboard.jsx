@@ -29,7 +29,7 @@ export default function Dashboard() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/resume/upload",
+        "https://ai-resume-analyzer-backend-aqz0.onrender.com/api/resume/upload",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -52,7 +52,7 @@ export default function Dashboard() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/analysis/analyze",
+        "https://ai-resume-analyzer-backend-aqz0.onrender.com/api/analysis/analyze",
         { resumeId, jobDescription },
         {
           headers: {
@@ -79,7 +79,7 @@ export default function Dashboard() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/analysis/improve",
+        "https://ai-resume-analyzer-backend-aqz0.onrender.com/api/analysis/improve",
         { resumeId, jobDescription },
         {
           headers: {
