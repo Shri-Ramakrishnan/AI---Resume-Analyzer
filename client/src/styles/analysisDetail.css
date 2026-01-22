@@ -1,0 +1,111 @@
+.analysis-page {
+  width: 100%;
+}
+
+.analysis-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 32px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* Back button */
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.analysis-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* ATS */
+.ats-section {
+  margin-bottom: 32px;
+}
+
+.ats-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ats-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ats-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 28px;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin: 4px 6px 4px 0;
+}
+
+.badge.green {
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+.badge.red {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+/* Lists */
+.list {
+  padding-left: 18px;
+}
+
+.list li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.role-fit {
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Loading / Error */
+.analysis-loading,
+.analysis-error {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
