@@ -3,18 +3,18 @@ const Resume = require("../models/Resume");
 
 exports.uploadResume = async (req, res) => {
   try {
-    // 1️⃣ Validate file
+
     if (!req.file) {
       return res.status(400).json({ message: "Resume file is required" });
     }
 
-    // 2️⃣ Extract text
+
     const resumeText = await extractTextFromResume(
       req.file.path,
       req.file.mimetype
     );
 
-    // 🔍 Debug log (VERY IMPORTANT while building)
+
     console.log("📄 Extracted resume text length:", resumeText.length);
 
     if (!resumeText || resumeText.trim().length < 30) {
@@ -24,7 +24,7 @@ exports.uploadResume = async (req, res) => {
       });
     }
 
-    // 3️⃣ Save resume
+
     const resume = await Resume.create({
       user: req.user.userId,
       fileName: req.file.originalname,
@@ -32,7 +32,7 @@ exports.uploadResume = async (req, res) => {
       content: resumeText,
     });
 
-    // 4️⃣ Response
+  
     res.status(201).json({
       message: "Resume uploaded successfully",
       resumeId: resume._id,

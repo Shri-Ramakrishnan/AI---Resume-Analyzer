@@ -4,7 +4,6 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 });
 
-// 🔐 Helper to safely extract JSON from AI output
 const extractJSON = (text) => {
   const firstBrace = text.indexOf("{");
   const lastBrace = text.lastIndexOf("}");

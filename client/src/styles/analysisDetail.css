@@ -12,7 +12,6 @@
   border: 1px solid var(--border);
 }
 
-/* Back button */
 .back-btn {
   background: none;
   border: none;
@@ -32,7 +31,6 @@
   margin-bottom: 24px;
 }
 
-/* ATS */
 .ats-section {
   margin-bottom: 32px;
 }
@@ -55,7 +53,6 @@
   background: linear-gradient(90deg, #22c55e, #16a34a);
 }
 
-/* Sections */
 .section {
   margin-bottom: 28px;
 }
@@ -66,7 +63,6 @@
   margin-bottom: 12px;
 }
 
-/* Badges */
 .badge {
   display: inline-block;
   padding: 6px 12px;
@@ -85,7 +81,7 @@
   color: #fecaca;
 }
 
-/* Lists */
+
 .list {
   padding-left: 18px;
 }
@@ -100,7 +96,6 @@
   color: var(--text-muted);
 }
 
-/* Loading / Error */
 .analysis-loading,
 .analysis-error {
   min-height: 60vh;

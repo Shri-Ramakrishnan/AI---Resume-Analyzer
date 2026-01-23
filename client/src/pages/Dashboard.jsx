@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [analysis, setAnalysis] = useState(null);
 
   const [loading, setLoading] = useState(false);
-  const [action, setAction] = useState(null); // analyze | improve
+  const [action, setAction] = useState(null);
 
   const token = localStorage.getItem("token");
 
@@ -20,7 +20,6 @@ export default function Dashboard() {
     if (!token) navigate("/");
   }, [navigate, token]);
 
-  /* ================= Upload Resume ================= */
   const uploadResume = async () => {
     if (!file) return alert("Select a resume");
 
@@ -43,7 +42,6 @@ export default function Dashboard() {
     }
   };
 
-  /* ================= Analyze Resume ================= */
   const analyzeResume = async () => {
     if (!resumeId || !jobDescription) return;
 
@@ -70,7 +68,6 @@ export default function Dashboard() {
     }
   };
 
-  /* ================= Improve Resume ================= */
   const improveResume = async () => {
     if (!resumeId || !jobDescription) return;
 
@@ -97,7 +94,6 @@ export default function Dashboard() {
     }
   };
 
-  /* ================= Download PDF ================= */
   const downloadPDF = () => {
     if (!analysis) return;
 

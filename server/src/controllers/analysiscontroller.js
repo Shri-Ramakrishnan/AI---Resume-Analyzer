@@ -2,9 +2,7 @@ const Resume = require("../models/Resume");
 const Analysis = require("../models/Analysis");
 const analyzeResumeWithGroq = require("../services/aiservice");
 
-/**
- * Analyze resume vs job description
- */
+
 exports.analyzeResume = async (req, res) => {
   try {
     const { resumeId, jobDescription } = req.body;
@@ -40,9 +38,7 @@ exports.analyzeResume = async (req, res) => {
   }
 };
 
-/**
- * Improve / rewrite resume using AI
- */
+
 exports.improveResume = async (req, res) => {
   try {
     const { resumeId, jobDescription } = req.body;

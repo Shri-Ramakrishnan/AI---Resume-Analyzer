@@ -93,9 +93,6 @@ export default function AnalysisDetail() {
   );
 }
 
-/* ===================== */
-/* Helper Components */
-/* ===================== */
 
 function Section({ title, children }) {
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/auth.css"; // 🔥 IMPORTANT
+import "../styles/auth.css"; 
 
 export default function Signup() {
   const [email, setEmail] = useState("");

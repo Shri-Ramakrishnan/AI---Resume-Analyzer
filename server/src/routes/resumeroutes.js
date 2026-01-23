@@ -5,7 +5,6 @@ const upload = require("../middlewares/uploadmiddleware");
 const authMiddleware = require("../middlewares/authmiddleware");
 const { uploadResume } = require("../controllers/resumecontroller");
 
-// Protected resume upload
 router.post(
   "/upload",
   authMiddleware,
