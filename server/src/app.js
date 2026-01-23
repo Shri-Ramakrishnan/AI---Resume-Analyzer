@@ -15,22 +15,20 @@ const allowedOrigins = [
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true); 
 
       if (allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("CORS not allowed for this origin"));
+        return callback(null, true);
       }
+
+      return callback(new Error("CORS not allowed"), false);
     },
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-
-app.options("*", cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -43,5 +41,6 @@ app.use("/api/improve", improveRoutes);
 app.get("/", (req, res) => {
   res.send("🚀 AI Resume Analyzer Backend is running");
 });
+
 
 module.exports = app;
